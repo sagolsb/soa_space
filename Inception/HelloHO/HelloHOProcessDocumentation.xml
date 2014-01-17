@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="HelloHOProcess">
+        <topicDocumentations>
+            <topicDocumentation name="HelloHOProcess">
+                <descriptions>
+                    <description locale="en">HelloHOProcess</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT8828965145097">
+                <labels>
+                    <label locale="en">Greet HO</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT8829006261138">
+                <labels>
+                    <label locale="en">ReviewNeeded</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT8828965145063">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT8828965145087">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="ACT8829276250341">
+                <labels>
+                    <label locale="en">WriteMessage</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf15"/>
+            <topicDocumentation name="sf16"/>
+            <topicDocumentation name="sf18"/>
+            <topicDocumentation name="sf7"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>
