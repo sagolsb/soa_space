@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="GreetingProcess">
+        <topicDocumentations>
+            <topicDocumentation name="GreetingProcess">
+                <descriptions>
+                    <description locale="en">GreetingProcess</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT8857044129987">
+                <labels>
+                    <label locale="en">Say Hello</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT8857052774225">
+                <labels>
+                    <label locale="en">Write Hello</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT8857178320773">
+                <labels>
+                    <label locale="en">ReviewNeeded</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT8857259030274">
+                <labels>
+                    <label locale="en">ReviewMsg</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT8857389518712">
+                <labels>
+                    <label locale="en">InitApproval</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT8857044129841">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT8857044129851">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="GTW8857341112757">
+                <labels>
+                    <label locale="en">g1</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW885734561971">
+                <labels>
+                    <label locale="en">g1</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf34"/>
+            <topicDocumentation name="sf35"/>
+            <topicDocumentation name="sf37"/>
+            <topicDocumentation name="sf7"/>
+            <topicDocumentation name="sf13"/>
+            <topicDocumentation name="sf14"/>
+            <topicDocumentation name="sf16">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf18"/>
+            <topicDocumentation name="sf22">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf23"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

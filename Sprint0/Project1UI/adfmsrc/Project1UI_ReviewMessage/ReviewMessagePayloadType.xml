@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="ReviewMessagePayloadType" Package="Project1UI_ReviewMessage"
+          BeanClass="Project1UI_ReviewMessage.ReviewMessagePayloadType"
+          isJavaBased="false">
+  <AccessorAttribute id="HelloObject" IsCollection="true"
+                     BeanClass="Project1UI_ReviewMessage.HelloObjectType"
+                     CollectionBeanClass="Project1UI_ReviewMessage.HelloObjectType_HelloObject_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://xmlns.oracle.com/bpm/bpmobject/HelloTypes/RevewObject"/>
+      <Property Name="nextSibling" Value="RevewObject"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Hello Object"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="HelloObject"/>
+      <Property Name="targetNamespace"
+                Value="http://xmlns.oracle.com/bpm/bpmobject/HelloTypes/HelloObject"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="RevewObject" IsCollection="true"
+                     BeanClass="Project1UI_ReviewMessage.RevewObjectType"
+                     CollectionBeanClass="Project1UI_ReviewMessage.RevewObjectType_RevewObject_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Revew Object"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="RevewObject"/>
+      <Property Name="targetNamespace"
+                Value="http://xmlns.oracle.com/bpm/bpmobject/HelloTypes/RevewObject"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

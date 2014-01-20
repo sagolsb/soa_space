@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="project1ui" ClientType="Generic">
+  <pageMap>
+    <page path="/taskDetails1.jspx" usageId="project1ui_taskDetails1PageDef"/>
+    <page path="/taskDetails2.jspx" usageId="project1ui_taskDetails2PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="project1ui_taskDetails1PageDef"
+          path="project1ui.pageDefs.taskDetails1PageDef"/>
+    <page id="project1ui_taskDetails2PageDef"
+          path="project1ui.pageDefs.taskDetails2PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="Project1UI_ReviewMessage"
+        path="project1ui.Project1UI_ReviewMessage"/>
+    <dc id="Project1UI_SayHello" path="project1ui.Project1UI_SayHello"/>
+  </dataControlUsages>
+</Application>
