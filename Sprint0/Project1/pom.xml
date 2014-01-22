@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>project1</groupId>
+  <artifactId>project1</artifactId>
+  <version>1.0</version>
+  <properties>
+    <oracle.home>D:\middlewarehome\jdev11.1.1.7\jdeveloper</oracle.home>
+    <server.url>http://localhost:7001</server.url>
+    <server.user>weblogic</server.user>
+    <server.password>welcome1</server.password>
+  </properties>
+  <!--scm>
+    <connection>scm:svn:svn+ssh://mark@ofm1.au.oracle.com/home/mark/svnrepos/soaProject2/trunk</connection>
+    <developerConnection>scm:svn:svn+ssh://mark@ofm1.au.oracle.com/home/mark/svnrepos/soaProject2/trunk</developerConnection>
+  </scm-->
+  <dependencies></dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <id>sca-compile</id>
+            <phase>compile</phase>
+            <configuration>
+              <target>
+                <property name="scac.input" value="${basedir}/composite.xml"/>
+                <ant antfile="${oracle.home}/bin/ant-sca-compile.xml"
+                     dir="${oracle.home}/bin" target="scac"/>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>sca-package</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <property name="build.compiler" value="extJavac"/>
+                <property name="compositeName" value="${project.artifactId}"/>
+                <property name="compositeDir" value="${basedir}"/>
+                <property name="revision" value="${project.version}"/>
+                <ant antfile="${oracle.home}/bin/ant-sca-package.xml"
+                     dir="${oracle.home}/bin" target="package"/>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>sca-deploy</id>
+            <phase>deploy</phase>
+            <configuration>
+              <target>
+                <property name="serverURL" value="${server.url}"/>
+                <property name="user" value="weblogic"/>
+                <property name="password" value="welcome1"/>
+                <property name="sarLocation"
+                          value="${basedir}/deploy/sca_${project.artifactId}_rev${project.version}.jar"/>
+                <property name="overwrite" value="true"/>
+                <property name="forceDefault" value="true"/>
+                <property name="partition" value="default"/>
+                <ant antfile="${oracle.home}/bin/ant-sca-deploy.xml"
+                     dir="${oracle.home}/bin" target="deploy"/>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>sca-undeploy</id>
+	    <phase>undeploy</phase>
+            <configuration>
+              <target>                                                
+                <property name="serverURL" value="${server.url}"/>                                                
+                <property name="user" value="${server.user}"/>                                                
+                <property name="password" value="${server.password}"/>                                                
+                <property name="compositeName" value="${project.artifactId}"/>                                                
+                <property name="revision" value="${project.version}"/>                                                
+                <property name="sarLocation"
+                          value="${basedir}/deploy/sca_${project.artifactId}_rev${project.version}.jar"/>                                                
+                <property name="overwrite" value="true"/>                                                
+                <property name="forceDefault" value="true"/>                                                
+                <property name="partition" value="default"/>                                                
+                <ant antfile="${oracle.home}/bin/ant-sca-deploy.xml"
+                     dir="${oracle.home}/bin" target="undeploy"/>                                            
+              </target>                                      
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <distributionManagement>
+     <!--use the following if you're not using a snapshot version.--> 
+    <repository>
+      <id>local</id>
+      <name>local repository</name>
+      <url>file:///C:/Users/Biramani/.m2/repository</url>
+    </repository>
+     <!--use the following if you ARE using a snapshot version. -->
+    <snapshotRepository>
+      <id>localSnapshot</id>
+      <name>local snapshot repository</name>
+      <url>file:///C:/Users/Biramani/.m2/repository</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

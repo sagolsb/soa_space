@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <property name="scac.input" value="D:\middlewarehome\soa_space\Sprint0\Project1/composite.xml"/>
+  <ant antfile="D:\middlewarehome\jdev11.1.1.7\jdeveloper/bin/ant-sca-compile.xml" dir="D:\middlewarehome\jdev11.1.1.7\jdeveloper/bin" target="scac"/>
+</target>
+</project>
